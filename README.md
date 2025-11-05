@@ -336,7 +336,7 @@ $display("Read Data = %h", HRDATA);
  
 ### 🧠 RTL Simulation Waveform
 
-![Simulation Waveform](./images/ahb_waveform.png)
+![Simulation Waveform](./images/ahb_waveform.jpg)
 
 *Functional simulation showing **write** and **readback** operations on the AHB-Lite bus.*  
 - **HADDR = 0x10**, **HWDATA = 0xA5A5A5A5**, **HWRITE = 1 → 0**  
@@ -348,7 +348,7 @@ $display("Read Data = %h", HRDATA);
 
 ### 🧾 Gate-Level Schematic (Post-Synthesis)
 
-![Gate-Level Schematic](./images/ahb_gate_schematic.png)
+![Gate-Level Schematic](./images/ahb_gate_schematic.jpg)
 
 *Generated after logic synthesis in **Cadence Genus**, showing mapped standard cells and combinational interconnects.*  
 - Hierarchy includes **address register bank**, **control logic**, and **data MUX network**.  
@@ -401,7 +401,7 @@ $display("Read Data = %h", HRDATA);
 
 ### 🧱 2D Layout View — Post-Layout (Cadence Innovus)
 
-![2D Layout](./images/ahb_layout_2d.png)
+![2D Layout](./images/ahb_layout_2d.jpg)
 
 *Routed physical layout of the AHB-Lite memory controller in 90 nm CMOS.*  
 - Standard cells placed within core area  
@@ -414,7 +414,7 @@ $display("Read Data = %h", HRDATA);
 
 ### 💾 GDSII View — Final Mask Layout
 
-![GDSII View](./images/ahb_gds.png)
+![GDSII View](./images/ahb_gds.jpg)
 
 *Final fabrication-ready **GDSII layout** generated from Innovus.*  
 - Multi-layer routing stack visible (M1–M5)  
