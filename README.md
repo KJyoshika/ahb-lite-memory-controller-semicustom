@@ -13,7 +13,7 @@
 
 *A high-performance parallel prefix adder implementing complete ASIC design flow*
 
-[Overview](#-overview) • [Architecture](#-architecture) • [Results](#-results) • [Getting Started](#-getting-started) • [Documentation](#-documentation)
+[Overview](#-overview) • [Architecture](#-architecture) • [Results](#-results)  • [Documentation](#-documentation)
 
 ---
 
