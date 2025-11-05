@@ -73,7 +73,6 @@ This project implements an AHB-Lite Memory Controller (AHB-MemCtrl) that interfa
                  │  To AHB Master     │
                  └────────────────────┘
 ```
-![AHB-Lite Memory Controller Architecture](./ahb_mem_ctrl_block.png)
 
 ## 🧠 AHB-Lite Memory Controller — Theoretical Overview
 
@@ -336,7 +335,7 @@ $display("Read Data = %h", HRDATA);
  
 ### 🧠 RTL Simulation Waveform
 
-![Simulation Waveform](./images/ahb_waveform.jpg)
+![Simulation Waveform](./ahb_waveform.jpg)
 
 *Functional simulation showing **write** and **readback** operations on the AHB-Lite bus.*  
 - **HADDR = 0x10**, **HWDATA = 0xA5A5A5A5**, **HWRITE = 1 → 0**  
@@ -348,7 +347,7 @@ $display("Read Data = %h", HRDATA);
 
 ### 🧾 Gate-Level Schematic (Post-Synthesis)
 
-![Gate-Level Schematic](./images/ahb_gate_schematic.jpg)
+![Gate-Level Schematic](./ahb_gate_schematic.jpg)
 
 *Generated after logic synthesis in **Cadence Genus**, showing mapped standard cells and combinational interconnects.*  
 - Hierarchy includes **address register bank**, **control logic**, and **data MUX network**.  
@@ -358,7 +357,7 @@ $display("Read Data = %h", HRDATA);
 
 ### 📊 Area Report — Cadence Genus
 
-![Area Report](./images/report_area.png)
+![Area Report](./report_area.png)
 
 **Total Cell Area:** 210,548.387 μm²  
 - Compact, well-optimized area footprint in 90 nm technology  
@@ -371,7 +370,7 @@ $display("Read Data = %h", HRDATA);
 
 ### ⚡ Power Report — Cadence Genus
 
-![Power Report](./images/report_power.jpg)
+![Power Report](./report_power.jpg)
 
 **Total Power:** 1.3672e-02 W (≈ 13.67 mW)  
 - Leakage: 9.4%  
@@ -384,7 +383,7 @@ $display("Read Data = %h", HRDATA);
 
 ### ⏱ Timing Report — Cadence Genus
 
-![Timing Report](./images/report_timing.jpg)
+![Timing Report](./report_timing.jpg)
 
 **Critical Path Delay:** 4.024 ns  
 **Slack:** +4.024 ns (Positive)  
@@ -401,7 +400,7 @@ $display("Read Data = %h", HRDATA);
 
 ### 🧱 2D Layout View — Post-Layout (Cadence Innovus)
 
-![2D Layout](./images/ahb_layout_2d.jpg)
+![2D Layout](./ahb_layout_2d.jpg)
 
 *Routed physical layout of the AHB-Lite memory controller in 90 nm CMOS.*  
 - Standard cells placed within core area  
@@ -414,7 +413,7 @@ $display("Read Data = %h", HRDATA);
 
 ### 💾 GDSII View — Final Mask Layout
 
-![GDSII View](./images/ahb_gds.jpg)
+![GDSII View](./ahb_gds.jpg)
 
 *Final fabrication-ready **GDSII layout** generated from Innovus.*  
 - Multi-layer routing stack visible (M1–M5)  
