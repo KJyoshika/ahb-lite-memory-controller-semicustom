@@ -435,4 +435,116 @@ $display("Read Data = %h", HRDATA);
 > Its **predictable timing**, **low latency**, and **scalable structure**
 > make it ideal for embedded processors, microcontrollers, and low-power SoC designs.
 
+## 📚 Reference Document
+Shrikant Jadhav, Anila Kommineni, Manoj Kumar Gundu, and Youngsoo Kim,
+Design & Verification of AMBA AHB-Lite Memory Controller,
+IEEE Computing and Communication Workshop and Conference (CCWC), March 2023.
+(https://drive.google.com/file/d/1RceMJ73Vnnrg_5C9jzoYDvfVh9_SCjdf/view?usp=drivesdk)
 
+### 🔍 Key Differences
+
+| **Aspect** | **Reference Paper** | **This Project ** |
+|:------------|:--------------------|:-----------------------------------|
+| **Scope** | Limited to RTL design and functional verification | Covers **complete RTL-to-GDSII ASIC flow** including synthesis, timing, and layout |
+| **Technology Node** | Generic (unspecified CMOS process) | Implemented in **90 nm CMOS standard cell library** |
+| **Design Environment** | Functional simulation in Xilinx Vivado | Full-flow implementation using **Cadence Genus + Innovus** |
+| **Verification Level** | Behavioral simulation only | **Self-checking testbench** with 100% functional coverage and protocol assertions |
+| **Results** | Only waveform-based functional proof | Quantitative metrics: **Area (210,548 μm²)**, **Power (13.67 mW)**, **Delay (4.024 ns)** |
+| **Architecture Representation** | Basic block diagram | Detailed multi-stage architecture with RTL hierarchy and control logic |
+| **Performance Analysis** | Not provided | Comprehensive **timing, area, power, and frequency** analysis tables |
+| **Physical Design** | Not included | Includes **floorplan, placement, routing, 2D layout, and GDSII export** |
+| **DRC/LVS Verification** | Absent | **DRC and LVS clean**, sign-off-ready design verified in Innovus |
+| **Documentation Quality** | Basic description of theory and simulation | Enhanced README with flow diagrams, figures, performance summaries, and license |
+| **Scalability** | Fixed 32-bit bus | **Parameterizable** for different data widths and memory sizes |
+| **Visualization** | Only waveform screenshots | Rich **visual gallery**: waveform, schematic, area, timing, power, layout, and GDS views |
+
+---
+
+### 🧠 How the Project Improved Over the Paper
+
+1. **Full ASIC Design Flow**  
+   - Extended from pure functional simulation to **RTL synthesis, place-and-route, and GDSII generation**, achieving a truly fabrication-ready design.  
+   - Introduced **physical design metrics** (area, power, timing) missing in the original paper.
+
+2. **Technology Implementation**  
+   - Implemented in **90 nm CMOS** with real standard cell libraries, enabling accurate analysis of physical constraints.
+
+3. **Timing and Power Optimization**  
+   - Achieved **4.024 ns critical path delay** (≈ 248 MHz) and **13.67 mW total power** — well-within modern low-power SoC standards.
+
+4. **Protocol Verification**  
+   - Added **self-checking AHB testbench** verifying all transaction types (read, write, idle, and sequential).  
+   - 100% coverage and zero assertion failures — ensuring compliance with AMBA AHB-Lite specifications.
+
+5. **Enhanced Documentation & Presentation**  
+   - Added **architecture diagrams**, **visual flow charts**, **synthesis tables**, and **layout figures** for end-to-end clarity.  
+   - Integrated **MIT License** and **academic citation**, improving professionalism.
+
+6. **Fabrication Readiness**  
+   - DRC and LVS-clean layout generated via **Cadence Innovus** → verified **tape-out-ready GDSII** output.  
+   - This step was entirely missing from the original paper.
+
+7. **Scalability and Future Extensions**  
+   - Designed RTL with **configurable parameters** (address width, data width, memory depth).  
+   - Ready for scaling to **64-bit** or **multi-slave** versions.
+
+---
+
+---
+
+## 📝 License
+
+This project is licensed under the **MIT License** — you are free to use, modify, and distribute it with proper credit.
+
+Copyright (c) 2025 [Jyoshika K]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+## 📬 Contact
+
+**[Jyoshika K]** 
+- 🏫 *Indian Institute of Information Technology Design and Manufacturing, Kurnool*  
+- 📧 **Email:** [jyoshikakp@gmail.com](mailto:your-email@example.com)  
+- 💼 **LinkedIn:** [linkedin.com/in/Jyoshika K](https://www.linkedin.com/in/your-profile)  
+- 🐙 **GitHub:** [github.com/KJyoshika](https://github.com/yourusername)
+- ## 📬 Contact 
+
+Feel free to reach out for **academic collaboration**, **VLSI design discussions**, or **project contributions**.
+
+
+For technical inquiries, collaboration opportunities, or project-related questions, please feel free to reach out through any of the above channels.
+
+## 🌟 Acknowledgments
+
+This project was successfully completed under the guidance and support of:
+
+- **Dr. P. Ranga Babu** — *Course Instructor and Project Guide*, Department of ECE, IIITDM Kurnool  
+- **IIITDM Kurnool** — For providing access to Cadence EDA tools and computational infrastructure  
+- **Cadence Design Systems** — For industrial-grade software used in synthesis and physical design  
+- **ARM Holdings (AMBA Specification)** — For the AHB-Lite protocol standard documentation  
+- **Open Source VLSI Community** — For educational materials and reference designs that inspired architectural exploration  
+
+Special thanks to all contributors and reviewers who provided valuable feedback during design, simulation, and documentation.
+
+---
+
+<div align="center">
+
+### 👨‍💻 Project Developer
+
+**[Jyoshika K]**  
+Roll No.: [123ec0041]  
+B.Tech (ECE)  
+*Indian Institute of Information Technology Design and Manufacturing, Kurnool*
+
+⭐ *If you found this project helpful, consider starring the repository!*  
+
+</div>
